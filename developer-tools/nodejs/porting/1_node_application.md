@@ -27,14 +27,14 @@ DELETE | /message/ID | delete message with ID
 ```
 config/model.js:
 module.exports.models = {
-connection: 'mongo',
+datastore: 'mongo',
  migrate: 'safe'
 };
 ```
 
 ```
-config/connections.js:
-module.exports.connections = {
+config/datastores.js:
+module.exports.datastores = {
   mongo: {
      adapter: 'sails-mongo',
      url: process.env.MONGO_URL || 'mongodb://localhost/messageApp'
